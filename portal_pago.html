@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de Pago - Tortillas de Harina Nazly">
+  <title>Portal de Pago - Tortillas de Harina Nazly</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('https://es.cravingsjournal.com/wp-content/uploads/2023/02/tortillas-de-harina-1-1024x1536.jpg');
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
 
+    header {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #8B4513;
+      font-family: 'Lobster', cursive;
+    }
+
+    .payment-method {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin-top: 20px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .address {
+      margin-bottom: 5px;
+      font-size: 0.9rem; /* Más fino */
+    }
+
+    .copyright {
+      font-size: 1.1rem; /* Un poco más grueso */
+    }
+
+    .whatsapp-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366; /* Color de WhatsApp */
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .whatsapp-chat img {
+      width: 40px; /* Tamaño del icono */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal de Pago - Tortillas de Harina Nazly</h1>
+    <p>Elige tu método de pago</p>
+  </header>
+
+  <div class="payment-method">
+    <h2>1. Efectivo</h2>
+    <p>Recibimos pagos en efectivo en nuestra tienda.</p>
+  </div>
+
+  <div class="payment-method">
+    <h2>2. PayPal</h2>
+    <p>Paga de forma segura a través de PayPal.</p>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=chrissam0709@gmail.com&item_name=Tortillas+de+Harina&amount=0.00&currency_code=MXN" class="btn btn-primary" target="_blank">Pagar con PayPal</a>
+  </div>
+
+  <div class="payment-method">
+    <h2>3. Mercado Pago</h2>
+    <p>Paga con Mercado Pago en el siguiente enlace.</p>
+    <a href="https://www.mercadopago.com.mx" class="btn btn-success" target="_blank">Pagar con Mercado Pago</a>
+  </div>
+
+  <div class="payment-method">
+    <h2>Contáctanos por WhatsApp</h2>
+    <p>Envía tu pedido a través de WhatsApp para un cobro en tiempo real.</p>
+    <a href="https://wa.me/523222032643?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20tortillas." class="btn btn-info" target="_blank">Enviar Mensaje a WhatsApp</a>
+  </div>
+
+  <footer>
+    <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
+    <p class="copyright">© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
+  </footer>
+
+  <a href="https://wa.me/523222032643" class="whatsapp-chat" target="_blank">
+    <img src="https://image-url.com/whatsapp-icon.png" alt="Chat con nosotros" />
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
