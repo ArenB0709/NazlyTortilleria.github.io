@@ -5,90 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="La historia de Tortillas de Harina Nazly, una tradición familiar.">
   <title>Nuestra Historia - Tortillas de Harina Nazly</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap">
   <style>
     body {
       background-image: url('https://es.cravingsjournal.com/wp-content/uploads/2023/02/tortillas-de-harina-1-1024x1536.jpg');
       background-size: cover;
-      font-family: sans-serif;
-      padding: 20px;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
-    }
-   h1 {
-      font-size: 40px;
-      margin-top: 0;
-      margin-bottom: 15px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      color: #8B4513; /* Marrón oscuro */
-      font-family: 'Impact', serif;
-    }
-    h2 {
-      font-size: 30px;
-      text-align: center;
-      margin-bottom: 15px;
-      color: #5D4037; /* Marrón medio */
-    }
-    .established {
-      font-style: italic;
-      color: darkred;
-      text-align: center;
-    }
-    .menu {
-      width: 80%;
-      background-color: rgba(222, 184, 135, 0.9);
-      margin: 0 auto;
       padding: 20px;
-      max-width: 500px;
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand {
+      font-family: 'Lobster', cursive;
+      font-size: 1.8rem;
+      color: #8B4513;
+    }
+
+    h2 {
+      font-family: 'Lobster', cursive;
+      font-size: 2.5rem;
+      color: #D2691E;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin-top: 20px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
     }
-    hr {
-      height: 2px;
-      background: brown;
-      border: none;
-    }
-    .bottom-line {
-      margin-top: 25px;
-    }
-    .menu-button {
-      background-color: darkred;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      margin: 10px auto;
-      display: block;
-    }
-    .menu-box {
-      display: none;
-      background-color: rgba(222, 184, 135, 0.95);
+
+    .content {
+      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-      margin-top: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
     }
-    .menu-box a {
-      color: darkred;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: block;
-      font-weight: bold;
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #5D4037;
     }
-    .menu-box a:hover {
-      background-color: #D2B48C;
-      color: white;
-    }
-    .show {
-      display: block;
-    }
+
     .watermark {
       position: relative;
       text-align: center;
-      color: white;
     }
+
     .watermark::before {
       content: '';
       background-image: url('logo_nazly.png');
@@ -103,60 +84,85 @@
       transform: translate(-50%, -50%);
       z-index: 0;
     }
+
     .watermark p {
       position: relative;
       z-index: 1;
     }
-    footer {
-      font-size: 14px;
-      text-align: center;
+
+    .menu-icon {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 15px; /* Ajustado para alinearlo con el nombre */
+      right: 20px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s;
     }
-    .address {
-      margin-bottom: 5px;
+
+    .menu-icon div {
+      background-color: #8B4513;
+      height: 4px;
+      width: 100%;
+      margin: 3px 0; /* Ajustado para mayor separación */
+    }
+
+    .menu-icon:hover {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
 
-  <button class="menu-button" onclick="toggleMenu()">Menú</button>
-  <div id="menu" class="menu-box">
-    <a href="index.html"><strong>Inicio</strong></a>
-    <a href="trabajo.html"><strong>Nuestro Trabajo</strong></a>
-    <a href="nosotros.html"><strong>Nuestra Historia</strong></a>
-    <a href="contacto.html"><strong>Contacto</strong></a>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Tortillas de Harina Nazly</a>
+    <div class="menu-icon" onclick="toggleNavbar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="trabajo.html">Nuestro Trabajo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">Nuestra Historia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <h2>Nuestra Historia</h2>
+
+  <div class="content watermark">
+    <p>Tortillas de Harina Nazly lleva el nombre de la hija menor de Saida y Antonio, quienes fundaron este negocio familiar en 2019. Antonio, un sonorense con una pasión innata por la cocina, decidió un día experimentar con la creación de tortillas frescas y auténticas. Sin una receta previa, se aventuró a probar hasta encontrar el sabor perfecto.</p>
+    <p>Saida, apoyando su sueño, se unió a él, y juntos comenzaron a elaborar tortillas que capturan la esencia de su amor y dedicación. Hoy, las Tortillas de Harina Nazly son el resultado de años de perfeccionamiento y pasión por la tradición sonorense.</p>
   </div>
 
-  <hr>
-  <div class="menu">
-    <main>
-      <header>
-        <h1>TORTILLAS DE HARINA NAZLY</h1>
-        <p class="established">Est. 2019</p>
-      </header>
-      <hr>
-      <article class="watermark">
-        <h2>Nuestra Historia</h2>
-        <p>Tortillas de Harina Nazly lleva el nombre de la hija menor de Saida y Antonio, quienes fundaron este negocio familiar en 2019. Antonio, un sonorense con una pasión innata por la cocina, decidió un día experimentar con la creación de tortillas frescas y auténticas. Sin una receta previa, se aventuró a probar hasta encontrar el sabor perfecto.</p>
-        <p>Saida, apoyando su sueño, se unió a él, y juntos comenzaron a elaborar tortillas que capturan la esencia de su amor y dedicación. Sus hijos, inspirados por el esfuerzo de sus padres, también se han sumado al proceso, aprendiendo no solo a hacer tortillas, sino también a valorar el trabajo en equipo y la tradición familiar.</p>
-        <p>Cada tortilla que producen refleja el cariño y el compromiso de esta familia, haciendo que cada cliente se sienta como parte de su hogar. Tortillas de Harina Nazly no es solo un negocio; es un legado de pasión y sabor que se transmite de generación en generación.</p>
-      </article>
-    </main>
+  <footer>
+    <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
+    <p class="copyright">© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
+  </footer>
 
-    <hr class="bottom-line">
-
-    <footer>
-      <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
-      <p>© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
-    </footer>
-  </div>
-  <hr>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    function toggleMenu() {
-      var menu = document.getElementById("menu");
-      menu.classList.toggle("show");
+    function toggleNavbar() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      navbarToggler.click();
     }
   </script>
-
 </body>
 </html>
