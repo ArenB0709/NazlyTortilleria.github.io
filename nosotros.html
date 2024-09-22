@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La historia de Tortillas de Harina Nazly, una tradición familiar.">
+  <title>Nuestra Historia - Tortillas de Harina Nazly</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('https://es.cravingsjournal.com/wp-content/uploads/2023/02/tortillas-de-harina-1-1024x1536.jpg');
+      background-size: cover;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+   h1 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #8B4513; /* Marrón oscuro */
+      font-family: 'Impact', serif;
+    }
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #5D4037; /* Marrón medio */
+    }
+    .established {
+      font-style: italic;
+      color: darkred;
+      text-align: center;
+    }
+    .menu {
+      width: 80%;
+      background-color: rgba(222, 184, 135, 0.9);
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    hr {
+      height: 2px;
+      background: brown;
+      border: none;
+    }
+    .bottom-line {
+      margin-top: 25px;
+    }
+    .menu-button {
+      background-color: darkred;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px auto;
+      display: block;
+    }
+    .menu-box {
+      display: none;
+      background-color: rgba(222, 184, 135, 0.95);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      margin-top: 10px;
+    }
+    .menu-box a {
+      color: darkred;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+    .menu-box a:hover {
+      background-color: #D2B48C;
+      color: white;
+    }
+    .show {
+      display: block;
+    }
+    .watermark {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .watermark::before {
+      content: '';
+      background-image: url('logo_nazly.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+    .watermark p {
+      position: relative;
+      z-index: 1;
+    }
+    footer {
+      font-size: 14px;
+      text-align: center;
+    }
+    .address {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-button" onclick="toggleMenu()">Menú</button>
+  <div id="menu" class="menu-box">
+    <a href="index.html"><strong>Inicio</strong></a>
+    <a href="trabajo.html"><strong>Nuestro Trabajo</strong></a>
+    <a href="nosotros.html"><strong>Nuestra Historia</strong></a>
+    <a href="contacto.html"><strong>Contacto</strong></a>
+  </div>
+
+  <hr>
+  <div class="menu">
+    <main>
+      <header>
+        <h1>TORTILLAS DE HARINA NAZLY</h1>
+        <p class="established">Est. 2019</p>
+      </header>
+      <hr>
+      <article class="watermark">
+        <h2>Nuestra Historia</h2>
+        <p>Tortillas de Harina Nazly lleva el nombre de la hija menor de Saida y Antonio, quienes fundaron este negocio familiar en 2019. Antonio, un sonorense con una pasión innata por la cocina, decidió un día experimentar con la creación de tortillas frescas y auténticas. Sin una receta previa, se aventuró a probar hasta encontrar el sabor perfecto.</p>
+        <p>Saida, apoyando su sueño, se unió a él, y juntos comenzaron a elaborar tortillas que capturan la esencia de su amor y dedicación. Sus hijos, inspirados por el esfuerzo de sus padres, también se han sumado al proceso, aprendiendo no solo a hacer tortillas, sino también a valorar el trabajo en equipo y la tradición familiar.</p>
+        <p>Cada tortilla que producen refleja el cariño y el compromiso de esta familia, haciendo que cada cliente se sienta como parte de su hogar. Tortillas de Harina Nazly no es solo un negocio; es un legado de pasión y sabor que se transmite de generación en generación.</p>
+      </article>
+    </main>
+
+    <hr class="bottom-line">
+
+    <footer>
+      <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
+      <p>© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
+    </footer>
+  </div>
+  <hr>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

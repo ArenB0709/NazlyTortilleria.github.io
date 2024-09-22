@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto para Tortillas de Harina Nazly.">
+  <title>Contacto - Tortillas de Harina Nazly</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('https://es.cravingsjournal.com/wp-content/uploads/2023/02/tortillas-de-harina-1-1024x1536.jpg');
+      background-size: cover;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+      color: white;
+    }
+    h1 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #8B4513; /* Marrón oscuro */
+      font-family: 'Impact', serif;
+    }
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #5D4037; /* Marrón medio */
+    }
+    .established {
+      font-style: italic;
+      color: darkred;
+      text-align: center;
+    }
+    .menu {
+      width: 90%;
+      max-width: 600px;
+      background-color: rgba(222, 184, 135, 0.9);
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    hr {
+      height: 2px;
+      background: brown;
+      border: none;
+    }
+    .menu-button {
+      background-color: darkred;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px auto;
+      display: block;
+    }
+    .menu-box {
+      display: none;
+      background-color: rgba(222, 184, 135, 0.95);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      margin-top: 10px;
+    }
+    .menu-box a {
+      color: darkred;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+    .menu-box a:hover {
+      background-color: #D2B48C;
+      color: white;
+    }
+    .show {
+      display: block;
+    }
+    .watermark {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .watermark::before {
+      content: '';
+      background-image: url('proyecto/img/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+    .watermark p {
+      position: relative;
+      z-index: 1;
+    }
+    footer {
+      font-size: 14px;
+      text-align: center;
+    }
+    .address {
+      margin-bottom: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0 20px; /* Márgenes laterales */
+    }
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid darkred;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+    button {
+      background-color: darkred;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 150px;
+      align-self: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-button" onclick="toggleMenu()">Menú</button>
+  <div id="menu" class="menu-box">
+    <a href="index.html"><strong>Inicio</strong></a>
+    <a href="trabajo.html"><strong>Nuestro Trabajo</strong></a>
+    <a href="nosotros.html"><strong>Nuestra Historia</strong></a>
+    <a href="contacto.html"><strong>Contacto</strong></a>
+  </div>
+
+  <hr>
+  <div class="menu">
+    <main>
+      <header>
+        <h1>TORTILLAS DE HARINA NAZLY</h1>
+        <p class="established">Est. 2019</p>
+      </header>
+      <hr>
+      <article class="watermark">
+        <h2>Contacto</h2>
+        <p>Si tienes preguntas, deseas realizar un pedido o enviar una sugerencia/queja, completa el siguiente formulario:</p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/tortilleriadeharinanazly" target="_blank">Tortillería de Harina Nazly</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/+523222032643" target="_blank">+523222032643</a></p>
+
+        <form action="mailto:arenbenavidez0131@gmail.com" method="post" enctype="text/plain">
+          <label for="topic">¿Qué desea tratar?</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Seleccione un tema</option>
+            <option value="pedido">Pedido</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="queja">Queja</option>
+          </select>
+          
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Comentarios (max. 150 caracteres):</label>
+          <textarea id="message" name="message" maxlength="150" required></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </article>
+    </main>
+
+    <hr class="bottom-line">
+
+    <footer>
+      <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
+      <p>© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
+    </footer>
+  </div>
+  <hr>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

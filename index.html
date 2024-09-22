@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tortillas de Harina Nazly, especializada en tortillas frescas y pedidos especiales en Punta de Mita y alrededores de la bahía.">
+  <title>Tortillas de Harina Nazly</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos CSS aquí */
+
+    body {
+      background-image: url('https://es.cravingsjournal.com/wp-content/uploads/2023/02/tortillas-de-harina-1-1024x1536.jpg');
+      background-size: cover;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+      color: black; /* Cambiado a negro */
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #8B4513; /* Marrón oscuro */
+      font-family: 'Impact', serif;
+    }
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #5D4037; /* Marrón medio */
+    }
+
+    .established {
+      font-style: italic;
+      color: darkred;
+      text-align: center;
+    }
+
+    .menu {
+      width: 80%;
+      background-color: rgba(222, 184, 135, 0.9);
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    hr {
+      height: 2px;
+      background: brown;
+      border: none;
+    }
+
+    .bottom-line {
+      margin-top: 25px;
+    }
+
+    /* Estilos para el botón de menú */
+    .menu-button {
+      background-color: darkred;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Caja desplegable del menú */
+    .menu-box {
+      display: none;
+      background-color: rgba(222, 184, 135, 0.95);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      margin-top: 10px;
+    }
+
+    .menu-box a {
+      color: darkred;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+
+    .menu-box a:hover {
+      background-color: #D2B48C;
+      color: white;
+    }
+
+    .show {
+      display: block;
+    }
+
+    /* Estilo para el artículo con marca de agua */
+    .watermark {
+      position: relative;
+      text-align: center;
+      color: black; /* Cambiado a negro */
+    }
+
+    .watermark::before {
+      content: '';
+      background-image: url('logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1; /* Ajusta la opacidad según sea necesario */
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
+    .watermark p {
+      position: relative;
+      z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    }
+
+    /* FOOTER */
+    footer {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .address {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón para mostrar el menú -->
+  <button class="menu-button" onclick="toggleMenu()">Menú</button>
+
+  <!-- Caja desplegable con enlaces -->
+  <div id="menu" class="menu-box">
+    <a href="index.html"><strong>Inicio</strong></a>
+    <a href="trabajo.html"><strong>Nuestro Trabajo</strong></a>
+    <a href="nuestros.html"><strong>Nuestra Historia</strong></a>
+    <a href="contacto.html"><strong>Contacto</strong></a>
+  </div>
+
+  <hr>
+  <div class="menu">
+    <main>
+      <header>
+        <h1>TORTILLAS DE HARINA NAZLY</h1>
+        <p class="established">Est. 2019</p>
+      </header>
+      <hr>
+      <article class="watermark">
+        <h2>Bienvenidos a Tortillas de Harina Nazly</h2>
+        <p>Desde 2019, nos especializamos en la producción de tortillas frescas, caseras y sin conservadores, elaboradas con dedicación para preservar su sabor auténtico. A lo largo de los años, hemos tenido el placer de repartir nuestras tortillas en toda la región de Punta de Mita y sus alrededores. Nos enfocamos en ofrecer pedidos especiales para reuniones y eventos, asegurando que cada tortilla sea el acompañante perfecto para tus momentos más importantes. Descubre el verdadero sabor de la tradición mexicana en cada mordida.</p>
+      </article>
+    </main>
+
+    <hr class="bottom-line">
+
+    <footer>
+      <span class="address">16 de Septiembre #3, Punta de Mita, Corral del Risco, Nay.</span>
+      <p>© 2024 Todos los derechos reservados. Tortillas de Harina Nazly.</p>
+    </footer>
+  </div>
+  <hr>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
